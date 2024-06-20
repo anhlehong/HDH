@@ -32,11 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     checkMultiRequest.addEventListener('change', () => {
         if (checkMultiRequest.checked) {
-            requestDiv.style.display = 'none';
-            divMultiRequest.style.display = 'none';
+            requestDiv.style.display = 'flex';
+            divOneRequest.style.display = 'none';
             maxHeader.textContent = 'Request';
         }
     });
+
 
     addRowButton.addEventListener('click', () => {
         addRow();
@@ -226,18 +227,20 @@ document.addEventListener('DOMContentLoaded', function () {
             const result = safetyStateCheckingAlgorithm();
 
             let divPar = document.createElement('div');
-            divPar.style.padding = "20px 0px 10px 0px";
+            let codeHTML = "";
 
-            let codeHTML = "<p>GIẢI THUẬT KIỂM TRA TRẠNG THÁI AN TOÀN </p>";
-            divPar.innerHTML = codeHTML;
-            rightContainer.appendChild(divPar);
+            if (signal == 1) {
+                divPar.style.padding = "20px 0px 10px 0px";
+                codeHTML = "<p>GIẢI THUẬT KIỂM TRA TRẠNG THÁI AN TOÀN </p>";
+                divPar.innerHTML = codeHTML;
+                rightContainer.appendChild(divPar);
+                printNeedTable();
+            }
 
             divPar = document.createElement('div');
             divPar.style.padding = "20px 0px 0px 0px";
             codeHTML = "";
 
-            if (signal == 1)
-                printNeedTable();
             printWorkTable();
 
             if (result) {
