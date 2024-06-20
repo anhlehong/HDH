@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banker</title>
+    <link rel="stylesheet" href="hdh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="left_container">
+            <div class="nav">
+                <ul class="left_nav">
+                    <li>
+                        <button class="add_delete" id="add_row">
+                            <i class="fa-solid fa-plus"></i>
+                            Row
+                        </button>
+                    </li>
+                    <li>
+                        <button class="add_delete" id="add_col">
+                            <i class="fa-solid fa-plus"></i>
+                            Col
+                        </button>
+                    </li>
+                    <li>
+                        <button class="add_delete" id="delete_row">
+                            <i class="fa-solid fa-trash-can"></i>
+                            Row
+                        </button>
+                    </li>
+                    <li>
+                        <button class="add_delete" id="delete_col">
+                            <i class="fa-solid fa-trash-can"></i>
+                            Col
+                        </button>
+                    </li>
+                </ul>
+                <ul class="right_nav">
+                    <li>
+                        <button class="run_algorithm" id="run_algorithm">
+                            <i class='bx bx-play'></i>
+                            Run
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="input">
+                <div class="content">
+                    <div class="heading_table_wrapper">
+                        <table id="heading_table">
+                            <tr>
+                                <th>
+                                    <div class="space"></div>
+                                </th>
+                                <th id="max_multiRequest">Max</th>
+                                <th>Allocation</th>
+                                <th>Available</th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="space"></div>
+                                </th>
+                                <th>
+                                    <div class="max_row_title">
+                                        <p>R1</p>
+                                        <p>R2</p>
+                                        <p>R3</p>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="allocation_row_title">
+                                        <p>R1</p>
+                                        <p>R2</p>
+                                        <p>R3</p>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="available_row_title">
+                                        <p>R1</p>
+                                        <p>R2</p>
+                                        <p>R3</p>
+                                    </div>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="data_table_wrapper">
+                        <table id="data_table"></table>
+                    </div>
+                </div>
+
+                <div class="radio_request">
+                    <div class="oneRequest" id="divOneRequest">
+                        <div class="checkbox">
+                            <input type="radio" name="request_type" id="check_one_request">
+                            <label for="check_one_request">Request?</label>
+                        </div>
+                        <div class="request" id="showOneRequest" style="display: none;">
+                            <div>
+                                <select id="mySelect"></select>
+                            </div>
+                            <div id="request_num">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oneRequest" id="divMultiRequest">
+                        <div class="checkbox">
+                            <input type="radio" name="request_type" id="check_multi_request">
+                            <label for="check_multi_request">multi-Request?</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_container" id="right_container"></div>
+    </div>
+
+    <script src="hdh.js"></script>
+    <script src="run.js"></script>
+</body>
+</html>
