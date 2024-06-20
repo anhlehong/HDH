@@ -389,3 +389,24 @@ option {
 .contentAnswer {
     margin: 15px;
 }
+
+#right_container p{
+    font-weight: bold;
+    padding: 0px 0px 20px 20px;
+}
+
+#right_container {
+    max-height: 100%; /* Đặt chiều cao tối đa cho vùng cuộn */
+    overflow-y: auto; /* Bật thanh cuộn trục Y */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#right_container::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên trình duyệt webkit (Chrome, Safari) */
+}
+
+#right_container div.input{
+    min-height: 500px;
+    margin-top: 15px;
+}
